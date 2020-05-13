@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="ad.size" content="width=300,height=600">
+   <meta name="viewport" content="width=device-width">
+   <title>300x600</title>
+   <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.0.1_min.js"></script> <!--  check for DoubleCLick cdn updates  -->
+   
+   <script>
+      var clickTag="http://www.google.com";
+   </script>
+   <link href="https://fonts.googleapis.com/css?family=Oswald:600" rel="stylesheet">
+   <style>
+      body, html{margin:0; padding:0;}
+      #wrapper{width:300px; height:600px; overflow:hidden; background:#ffffff; position:relative; font-size: 18px; line-height: 1.6;}
+      #clickArea{display:block; width:298px; height:598px; border:1px solid #cccccc; z-index:1000; cursor:pointer; position:absolute;}
+      #content{position:relative; top:0; left:0; width:300px; height:600px;}
+      #logoBox{bottom:16px; right:15px; position:absolute;}
+      .helper{display:inline-block; vertical-align:middle; height:100%;}
+      #partner{height:40px; width: 50px; display:inline-block; vertical-align:middle;}
+      #partnercontainer {margin-right:15px; padding-right:15px; border-right: 1px solid #cccccc; display:inline-block; vertical-align:middle; height: 40px;}
+      #cdw{display:inline-block; background:url('cdwLogo.svg') no-repeat center right; width:87px; height:40px; vertical-align:middle;}
+      .cdwLogo{}
+      .logoAlone{}
+      .sprite{position: absolute;}
+      .center {left:0; right:0; margin:0 auto;}
+      /*--separate styles for positioning your elements--*/
+      /* custom css elements */
+      .spacer {
+         height:20px;
+      }
+      .cta {
+         position: absolute;
+         bottom: 100px;
+         left: 21px;
+         font-family: 'Oswald', "Verdana", Arial, sans-serif;
+         font-weight: 600;
+         color: #ffffff;
+         font-size: .9em;
+         background: #cc0000;
+         padding: 3px 14px 5px 14px;
+         text-decoration: none;
+         text-transform: uppercase;
+      }
+      .cta:hover {
+         text-decoration: none;
+      }
+      #arrow {
+      }
+      #bg-img {
+         display: block;
+         position: absolute;
+         right: 0px;
+      }
+      .text {
+         width: 231px;
+         top: 200px;
+         left: 21px;
+      }
+      .h1, .h2 {
+         color: #000000;
+         position: absolute;
+         font-family: 'Oswald', "Verdana", Arial, sans-serif;
+         font-weight: 600;
+      }
+      .h1 {
+         font-size: 1.6em;
+         text-transform: uppercase;
+      }
+      .h2 {
+         font-size: 1.24em;
+         top: 240px;
+      }
+      .body {
+         font-size: .9em; /* font size may be tweaked if copy doesn't fit */
+         position: absolute;
+         font-family: "Verdana", arial, sans-serif;
+         top: 240px;
+      }
+      .mask {
+         background-color: #ffffff;
+         position: absolute;
+         display: block;
+         width: 222px;
+         height: 215px;
+         overflow: hidden;
+         top:217px;
+         left:0;
+      }
+      #we-get {
+         display: block;
+         position: absolute;
+         top: 221px;
+         left: 46px;
+         width: 209px;
+         height: 66px;
+      }
+      .underline {
+         background-color:#cc0000;
+         position: absolute;
+         top:293px;
+         left:46px;
+         width:209px;
+         height:12px;
+      }
+      sup.r {font-size: .55em; vertical-align: top; top: 0; position: relative; width: 0.6em; display: inline-block;}     
+      sup.r.tuck {width: 0.1em; display: inline-block;}      
+      sup.tm {font-size: 75%; vertical-align: top; top: -2px; position: relative; width: 0.6em; display: inline-block;}
+      sup.inline {display: inline;}
+      .gradient {
+         background: -moz-linear-gradient(45deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
+         background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%);
+         background: linear-gradient(45deg, rgba(0,0,0,0.45) 0%,rgba(0,0,0,0) 100%);
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+         position: absolute;
+         height: 100%;
+         width: 100%;
+      }
+      .white-txt {
+         color: #fff;
+      }
+      #product {
+         position: absolute;
+         top: 60px;
+         width: 200px;
+      }
+      .footer {
+         position: absolute;
+         display: block;
+         width: 100%;
+         bottom: 0;
+         height: 70px;
+         /*box-shadow: rgba(0,0,0,0.2) 0 0 8px 0px;*/
+         background: white;
+      }                
+   </style>
+</head>
+<body>
+   <div id="wrapper">
+      <a href="javascript:void(window.open(window.clickTag, '_blank'))" id="clickArea"></a>
+      <div id="content">
+         <!--html elements/sprites go here-->
+         <div>
+            <img id="bg-img" src="bg.jpg" />
+            <!-- <div class="gradient"></div> add if needed for WE GET visibility -->
+            <svg id="we-get" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="145.6" height="46.42" viewBox="0 0 145.6 46.42">
+               <defs>
+                  <clipPath id="clip-path" transform="translate(0 0)">
+                     <rect width="145.6" height="46.42" style="fill:none"/>
+                  </clipPath>
+               </defs>
+               <title>We Get</title>
+               <g style="clip-path:url(#clip-path)">
+                  <path d="M125.29.69V8.61h6V45.8h8.4V8.61h5.92V.69Zm-21.66,0V45.8h18.11V38H112V25.83h7v-7h-7V8.61h9.37V.69ZM88.09,0C80.37,0,76.86,5.65,76.86,13.91v19c0,9.57,3.86,13.5,9.23,13.5A7.27,7.27,0,0,0,91.67,44h.14V45.8h6.82V22.86H88.85v6.27h2.48v7.92a3,3,0,0,1-2.62,1.45c-2.27,0-3.58-1.58-3.58-5.65V13.91c0-4.68,1.1-6.2,3.51-6.2,1.65,0,2.75,1,3.51,5.1l6.47-1.72C97.87,3.58,93.74,0,88.09,0M44,.69V45.8H62.13V38H52.42V25.83h7v-7h-7V8.61h9.37V.69Zm-4.28,0H31.47l-3.58,32h-.14L23.9.69H16L12.05,32.51h-.14L8.4.69H0L6.89,45.8h9.44l3.51-26.51H20L23.42,45.8h9.43Z" transform="translate(0 0)" style="fill:#ffffff"/>
+               </g>
+            </svg>
+            <div class="underline"></div>
+         </div>
+         
+         <div id="txt1" class="text h1 white-txt">
+            WORKING CLOSER THAN EVER, EVEN<br>WHEN WE&rsquo;RE APART.
+         </div>
+         
+         <div id="txt2" class="text body">
+            Secure, reliable collaboration tools from Cisco<sup class="r inline">&reg;</sup> Webex, orchestrated by the experts at CDW, help your employees stay connected and productive from anywhere.
+         </div>
+         
+         <div id="txt3" class="text h2">
+            To bring teams<br>together, you need<br>Cisco<sup class="r inline">&reg;</sup> Webex and IT&nbsp;Orchestration by&nbsp;CDW<sup class="r tuck">&reg;</sup>.
+         </div>
+         
+         <div class="cta">LEARN MORE<span id="arrow"> &#8250;</span></div>
+         
+         <img id="product" class="center"
+         src="product.png"
+         srcset="product2x.png" 
+         >
+         <div class="footer">
+            <!--PARTNER SWAP. LEAVE ALONE.-->
+            <div id="logoBox">
+               <div id="partnercontainer"><span class="helper"></span>
+                  <img id="partner" src="partnerLogo.svg" onerror="deletePartner(this);">
+               </div>
+               <div class="cdwLogo" id="cdw"></div>
+            </div>
+            <!--PARTNER SWAP. LEAVE ALONE.-->  
+         </div>
+      </div>
+   </div>
+   <script>
+      (function(){
+         //this is the code to add to make the banners work with DCM
+         var partner=new Image();
+         partner.onload=function(){
+            if(this.width<5){
+               var partner=document.getElementById('partnercontainer');
+               partnercontainer.parentNode.removeChild(partnercontainer);
+               document.getElementById('cdw').className="logoAlone";
+            }
+         }
+         partner.src='partnerLogo.svg';
+         //-----end of code block-----
+         
+         function deletePartner(image){
+            image.onerror="";
+            var partner=document.getElementById('partnercontainer');
+            partnercontainer.parentNode.removeChild(partnercontainer);
+            document.getElementById('cdw').className="logoAlone";
+         }
+         var t1=new TimelineLite();
+         //animate banner
+         t1
+         .from("#bg-img", 1, {x:59, ease: Power1.easeOut}, "+=1.5") // x = (BG image width) - (ad width)
+         .to("#we-get, .underline", 1, {opacity:0, ease: Power2.easeOut}, "-=1")
+         
+         .from("#txt1", 1, {x:-300, ease: Power2.easeOut}, "-=1")
+         
+         .to(["#txt1", "#bg-img", ".gradient"], 1, {opacity: 0}, "+=2.2")
+         
+         .from(["#txt2", ".cta"], 1, {x:-300, ease: Power2.easeInOut}, "-=.6")
+         .from("#product", 1, {opacity: 0, x:300, ease: Power2.easeInOut}, "-=1")
+         .to("#txt2", 1, {opacity: 0}, "+=6.2")
+         
+         .from("#txt3", 1, {x:-300, ease: Power2.easeOut}, "-=.5")
+         
+         // .pause(.2) //frame 0
+         // .pause(2.7) //frame 1
+         // .pause(6) //frame 2
+         // .pause(15) //frame 3
+         ;
+         
+         console.log("length: "+t1.duration());
+      }()); //<--timeline self-executes on load
+   </script>
+</body>
+</html>
